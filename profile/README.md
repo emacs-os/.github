@@ -19,7 +19,7 @@ The rootfs is intended to be git-tracked by policy (base-owned paths; runtime st
 ## Base
 
 - Grub
-- Static Linux kernel
+- Static Linux kernel (initramfs may become default for user friendliness)
 - Static Bash
 - Static GNU coreutils
 - Static Emacs with `--pid1` patchset
