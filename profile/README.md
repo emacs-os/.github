@@ -10,9 +10,9 @@
 
 ---
 
-Emacs-OS is the home of **el-init**, spiritual successor to [systemE](https://github.com/emacs-os/systemE) (archived). Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
+Emacs-OS is the home of **[el-init](https://github.com/emacs-os/el-init)** (coming soon), spiritual successor to [systemE](https://github.com/emacs-os/systemE) (archived). Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
 
-The base system consists of Grub, a Linux kernel built for a no-initrd boot path, static GNU coreutils, and static Emacs with an optional `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
+The base system consists of Grub, a Linux kernel built for a no-initrd boot path, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
 The rootfs is intended to be git-tracked by policy (base-owned paths; runtime state excluded). Emacs-OS is technically a fork of [KISS Linux](https://kisscommunity.org/), similar in approach to [stali](http://sta.li) and [Oasis](https://github.com/oasislinux/oasis), but with different goals. An unashamedly full-send glibc-bloated system. The goal is not small binaries - it is a system where Emacs runs everything, from boot to shutdown.
 
