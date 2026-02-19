@@ -20,11 +20,12 @@ The rootfs is intended to be git-tracked by policy (base-owned paths; runtime st
 
 - Grub
 - Static Linux kernel (initramfs may become default for user friendliness)
-- Static Bash (many scripts may be rewritten in Gauche Scheme)
+- Static Bash
 - Static GNU coreutils
 - Static Emacs with `--pid1` patchset
 - el-init (process supervisor / init system)
 - GNU toolchain (gcc, glibc, binutils)
+- Static Bash (many scripts may be rewritten in Gauche Scheme)
 - Package manager (rewrite of KISS package manager in Gauche Scheme) for managing the static base
 - [Guix](https://guix.gnu.org/) as a secondary package manager for additional userland software not packaged by Emacs-OS, and as a dev tool. Guix Home provides declarative, reproducible user environment management with rollback support
 
