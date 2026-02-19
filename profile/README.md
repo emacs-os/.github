@@ -10,7 +10,7 @@
 
 ---
 
-Emacs-OS is the home of **el-init**. Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
+Emacs-OS is the home of **el-init**, spiritual successor to [systemE](https://github.com/emacs-os/systemE) (archived). Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
 
 The base system consists of Grub, a Linux kernel built for a no-initrd boot path, static GNU coreutils, and static Emacs with an optional `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
