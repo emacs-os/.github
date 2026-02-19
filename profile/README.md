@@ -10,7 +10,7 @@
 
 ---
 
-Emacs-OS is the home of **el-init**. Emacs-OS is a Linux distribution where Emacs is PID 1.
+Emacs-OS is the home of **el-init**. Emacs-OS is poised to be the first Linux distribution where Emacs is PID 1.
 
 The base system consists of Grub, a static Linux kernel, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
@@ -23,14 +23,12 @@ The rootfs is to be git-tracked, similar in approach to [stali](http://sta.li), 
 - Static GNU coreutils
 - Static Emacs with `--pid1` patchset
 - el-init (process supervisor / init system)
-
-el-init may also be run with a non-patched Emacs for supervision only, as a drop-in replacement for a service supervisor such as perp on a distro like Oasis or similar (leaving zombie reaping to a shim pid1 such as sinit).
-
-## Userland
-
 - glibc toolchain
 - Bash (many scripts may be rewritten in Gauche Scheme)
-- Package manager (Scheme/Lisp)
+- Package manager (Scheme/Lisp) for managing the static base
+- [Guix](https://guix.gnu.org/) as a secondary package manager for additional userland software not packaged by Emacs-OS, and as a dev tool
+
+el-init may also be run with a non-patched Emacs for supervision only, as a drop-in replacement for a service supervisor such as perp on a distro like Oasis or similar (leaving zombie reaping to a shim pid1 such as sinit).
 
 <div align="center">
 <br>
