@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../el-init-branding-2.png" alt="EL-INIT" width="300">
+<img src="../el-init-branding-2.png" alt="EL-INIT" width="450">
 
 # Emacs Operating System
 
