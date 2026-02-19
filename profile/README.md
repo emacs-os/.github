@@ -23,7 +23,7 @@ The rootfs is intended to be git-tracked by policy (base-owned paths; runtime st
 - Static GNU coreutils
 - Static Emacs with `--pid1` patchset
 - el-init (process supervisor / init system)
-- Toolchain/devkit (optional)
+- GNU toolchain (gcc, glibc, binutils)
 - Bash (many scripts may be rewritten in Gauche Scheme)
 - Package manager (rewrite of KISS package manager in Gauche Scheme) for managing the static base
 - [Guix](https://guix.gnu.org/) as a secondary package manager for additional userland software not packaged by Emacs-OS, and as a dev tool. Guix Home provides declarative, reproducible user environment management with rollback support
