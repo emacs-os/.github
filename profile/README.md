@@ -10,25 +10,25 @@
 
 ---
 
-Emacs-OS is the home of **el-init**. Emacs-OS is poised to be the first Linux distribution where Emacs is PID 1.
+Emacs-OS is the home of **el-init**. Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
 
-The base system consists of Grub, a static Linux kernel, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
+The base system consists of Grub, a Linux kernel built for a no-initrd boot path (initramfs may become default for user friendliness), static GNU coreutils, and static Emacs with an optional `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
-The rootfs is to be git-tracked, technically a fork of [KISS Linux](https://kisscommunity.org/), similar in approach to [stali](http://sta.li) and [Oasis](https://github.com/oasislinux/oasis), but with different goals. Emacs-OS is to be an unashamedly full-send glibc-bloated Emacs OS. The goal is not small binaries - it is a system where Emacs runs everything, from boot to shutdown.
+The rootfs is intended to be git-tracked by policy (base-owned paths; runtime state excluded). Emacs-OS is technically a fork of [KISS Linux](https://kisscommunity.org/), similar in approach to [stali](http://sta.li) and [Oasis](https://github.com/oasislinux/oasis), but with different goals. Emacs-OS is an unashamedly full-send glibc-bloated Emacs OS. The goal is not small binaries - it is a system where Emacs runs everything, from boot to shutdown.
 
 ## Base
 
 - Grub
-- Static Linux kernel (initramfs may become default for user friendliness)
+- Linux kernel (initramfs may become default for user friendliness)
 - Static GNU coreutils
 - Static Emacs with `--pid1` patchset
 - el-init (process supervisor / init system)
-- glibc toolchain
+- Toolchain/devkit (optional)
 - Bash (many scripts may be rewritten in Gauche Scheme)
 - Package manager (rewrite of KISS package manager in Gauche Scheme) for managing the static base
 - [Guix](https://guix.gnu.org/) as a secondary package manager for additional userland software not packaged by Emacs-OS, and as a dev tool. Guix Home provides declarative, reproducible user environment management with rollback support
 
-In general, Emacs-OS trusts the decisions made by the KISS Linux community and aims to develop tooling to automate most of their package build files, only forking where necessary to shift for Emacs-OS goals.
+In general, Emacs-OS trusts the decisions made by the KISS Linux community and aims to develop tooling to automate the repetitive parts of their package build files, only forking where necessary to shift for Emacs-OS goals.
 
 el-init may also be run standalone as a pid2+ userland supervisor with a non-patched Emacs - for example, managing an EXWM/Xorg session startup, or local dev project daemons. The "init" in el-init is optional - it makes a fine supervisor. It can also serve as a drop-in replacement for a service supervisor such as perp on a distro like Oasis or similar (leaving zombie reaping to a shim pid1 such as sinit).
 
