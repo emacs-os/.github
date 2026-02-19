@@ -10,13 +10,13 @@
 
 ---
 
-EOS is the home of **el-init**. EOS is a Linux distribution where Emacs is PID 1.
+Emacs-OS is the home of **el-init**. Emacs-OS is a Linux distribution where Emacs is PID 1.
 
 The entire rootfs is to be git-tracked.
 
 The base system consists of Grub, a static Linux kernel, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
-The rootfs is git-tracked, similar in approach to [stali](http://sta.li), but with different goals. EOS is to be an unashamedly full-send glibc-bloated Emacs OS. The goal is not small binaries - it is a system where Emacs runs everything, from boot to shutdown.
+The rootfs is git-tracked, similar in approach to [stali](http://sta.li), but with different goals. Emacs-OS is to be an unashamedly full-send glibc-bloated Emacs OS. The goal is not small binaries - it is a system where Emacs runs everything, from boot to shutdown.
 
 ## Base
 
