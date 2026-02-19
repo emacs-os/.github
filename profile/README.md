@@ -10,16 +10,24 @@
 
 ---
 
-EOS is a set of packages that turn Emacs into an operating system layer. **el-init** is the process supervisor and init system at its core.
+EOS is a Linux distribution where Emacs is PID 1. The entire rootfs is git-tracked.
 
-```elisp
-(require 'el-init)
-(el-init-start)
-```
+The base system consists of Grub, a static Linux kernel, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** — the process supervisor and init system at its core.
 
-## License
+The rootfs is git-tracked, similar in approach to [stali](http://sta.li), but with different goals. EOS is an unashamedly full-send glibc-bloated Emacs OS. The goal is not small binaries — it is a system where Emacs runs everything, from boot to shutdown.
 
-[GPL-3.0](LICENSE)
+## Base
+
+- Grub
+- Static Linux kernel
+- Static GNU coreutils
+- Static Emacs with `--pid1` patchset
+- el-init (process supervisor / init system)
+
+## Userland
+
+- glibc toolchain
+- Package manager (Scheme/Lisp)
 
 <div align="center">
 <br>
