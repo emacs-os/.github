@@ -10,7 +10,9 @@
 
 ---
 
-EOS is a Linux distribution where Emacs is PID 1. The entire rootfs is to be git-tracked.
+EOS is the home of **el-init**. EOS is a Linux distribution where Emacs is PID 1.
+
+The entire rootfs is to be git-tracked.
 
 The base system consists of Grub, a static Linux kernel, static GNU coreutils, and static Emacs with the `--pid1` patchset running **el-init** - the process supervisor and init system at its core.
 
