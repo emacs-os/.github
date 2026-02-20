@@ -6,7 +6,7 @@
 
 A proper full-send Emacs-OS aims to be a Linux distribution where Emacs runs as PID 1.
 
-Emacs-OS is the home of **[el-init](https://github.com/emacs-os/el-init)** (coming soon),
+Emacs-OS is the home of **[el-init](https://github.com/emacs-os/el-init)**,
 spiritual successor to [systemE](https://github.com/emacs-os/systemE) (archived).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-purple.svg)](LICENSE)
